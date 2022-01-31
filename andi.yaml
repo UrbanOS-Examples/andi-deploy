@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  tag: 2.0.2
+  
+secrets:
+  live_view:
+    enable: false
+
+resources:
+  limits:
+    memory: 512Mi
+    cpu: 300m
+  requests:
+    memory: 512Mi
+    cpu: 300m
+
+global: 
+  auth:
+    jwt_issuer: "https://smartcolumbusos-demo.auth0.com/"
+    auth0_domain: "smartcolumbusos-demo.auth0.com"
+  kafka:
+    brokers: "streaming-service-kafka-bootstrap.streaming-prime:9092"
+
+auth:  
+    auth0_client_id: "REDACTED"
+  
+vaultRole: "andi-role"

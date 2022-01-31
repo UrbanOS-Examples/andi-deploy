@@ -1,0 +1,9 @@
+tolerations: 
+  - key: scos.run.public-worker
+    operator: Equal
+    value: "true"
+    effect: NoExecute
+
+accessLevel: "public"
+
+vaultRole: "andi-public-role"
